@@ -1,0 +1,8 @@
+name: CommandDispatcher
+version: '${project.version}'
+main: us.mytheria.commanddispatcher.CommandDispatcher
+load: STARTUP
+api-version: 1.13
+commands:
+  worlddispatch:
+    description: will dispatch a command to all players in a world
