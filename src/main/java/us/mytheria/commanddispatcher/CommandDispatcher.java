@@ -22,6 +22,10 @@ public final class CommandDispatcher extends JavaPlugin {
 
         @Override
         public boolean onCommand(CommandSender commandSender, Command command, String s, String[] strings) {
+            if (!commandSender.hasPermission("commanddispatcher.admin")) {
+                commandSender.sendMessage("You do not have permission to use this command");
+                return true;
+            }
             if (strings.length == 0) {
                 commandSender.sendMessage("Please specify a world");
                 return true;
